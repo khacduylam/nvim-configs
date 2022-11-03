@@ -7,8 +7,8 @@ keymap.set('n', '<C-j>', '<C-w>j')
 keymap.set('n', '<C-l>', '<C-w>l')
 
 -- move lines 
-keymap.set({ 'n', 'v' }, 'K', ":move '<-2 <CR>gv=gv") 
-keymap.set({ 'n', 'v' }, 'J', ":move '>+1 <CR>gv=gv") 
+keymap.set({ 'v' }, 'K', ":move '<-2 <CR>gv=gv") 
+keymap.set({ 'v' }, 'J', ":move '>+1 <CR>gv=gv") 
 
 -- select all 
 keymap.set('n', '<C-a>', 'gg<S-v>G')

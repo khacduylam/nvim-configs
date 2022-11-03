@@ -12,11 +12,11 @@ end
 vim.cmd [[packadd packer.nvim]]
 
 packer.startup(function(use)
-  --[[ common --]]
+  --[[ COMMON --]]
   use 'wbthomason/packer.nvim'
   use 'nvim-lua/plenary.nvim'
   use 'kyazdani42/nvim-web-devicons'
-  --[[ theme --]]
+  --[[ THEME --]]
   use 'Mofiqul/vscode.nvim'
   -- use 'maxmx03/solarized.nvim'
   use {
@@ -40,11 +40,11 @@ packer.startup(function(use)
     run = './install --bin'
   }
   use 'junegunn/fzf.vim'
-  --[[ LSP configs --]]
+  --[[ LSP CONFIGS --]]
   use 'onsails/lspkind-nvim'
   use 'neovim/nvim-lspconfig'
 
-  --[[ completion --]]
+  --[[ COMPLETION --]]
   use 'L3MON4D3/LuaSnip'
   use 'hrsh7th/cmp-buffer'
   use 'hrsh7th/cmp-nvim-lsp'
@@ -52,17 +52,17 @@ packer.startup(function(use)
   use 'hrsh7th/cmp-path'
 
 
-  --[[ markdown --]]
+  --[[ MARKDOWN --]]
   use({
     "iamcco/markdown-preview.nvim",
     run = function() vim.fn["mkdp#util#install"]() end,
   })
   
-  --[[ git blame & browse --]]
+  --[[ GIT --]]
   use 'APZelos/blamer.nvim'
   use 'tpope/vim-fugitive'
 
-  --[[ misc --]]
+  --[[ MISC --]]
   use 'preservim/nerdcommenter'
   use { 'mg979/vim-visual-multi', branch = 'master' }
   use 'leafgarland/typescript-vim'

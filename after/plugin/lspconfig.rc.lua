@@ -1,5 +1,9 @@
+--[[ 
+-- doc: https://levelup.gitconnected.com/a-step-by-step-guide-to-configuring-lsp-in-neovim-for-coding-in-next-js-a052f500da2#5a4b
+----]]
+
 local status, lspconfig = pcall(require, 'lspconfig')
-if not status then return end 
+if not status then return end
 
 -- custom compeletion items
 local protocol = require('vim.lsp.protocol')
@@ -41,8 +45,25 @@ local on_attach = function(client, bufnr)
   vim.keymap.set('n', '<C-k>', vim.lsp.buf.signature_help, bufopts)
 end
 
+-- lsp for typescript
 lspconfig.tsserver.setup({
-    on_attach = on_attach
+  on_attach = on_attach
+})
+
+-- lsp for lua
+lspconfig.sumneko_lua.setup({
+  on_attach = on_attach,
+  settings = {
+    Lua = {
+      diagnostics = {
+        globals = { 'vim' }
+      },
+      workspace = {
+        library = vim.api.nvim_get_runtime_file('', true),
+        checkThirdParty = false
+      },
+    },
+  }
 })
 
 -- config diagnostics 
