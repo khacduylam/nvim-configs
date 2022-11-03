@@ -1,8 +1,8 @@
 local status, vscode = pcall(require, 'vscode')
-if not status then return end 
+if not status then return end
 local c = require('vscode.colors')
 
-vim.opt.background = 'dark'
+vim.o.background = 'dark'
 
 vscode.setup({
     transparent = false,

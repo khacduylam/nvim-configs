@@ -13,7 +13,7 @@ vim.opt.autoindent = true
 vim.opt.smartindent = true
 vim.opt.number = true
 vim.opt.signcolumn = 'no'
--- vim.opt.colorcolumn = '120'
+---- vim.opt.colorcolumn = '120'
 vim.opt.hlsearch = true
 vim.opt.backup = false
 vim.opt.showcmd = true
@@ -31,7 +31,12 @@ vim.opt.lazyredraw = true
 vim.opt.wrap = false -- No Wrap lines
 vim.opt.backspace = { 'start', 'eol', 'indent' }
 vim.opt.path:append { '**' } -- Finding files - Search down into subfolders
-vim.opt.wildignore:append { '*/node_modules/*' }
+vim.opt.wildignore:append { '*/node_modules/*', '*.o', '*.obj', '.git', '*.rbc', '*.pyc', '*/__pycache__/*' }
+vim.opt.wildoptions = 'pum'
+vim.opt.cursorline = true
+vim.opt.termguicolors = true
+vim.opt.winblend = 0
+vim.opt.pumblend = 5
 
 -- Add asterisks in block comments
 vim.opt.formatoptions:append { 'r' }

@@ -16,6 +16,7 @@ packer.startup(function(use)
   use 'wbthomason/packer.nvim'
   use 'nvim-lua/plenary.nvim'
   use 'kyazdani42/nvim-web-devicons'
+
   --[[ THEME --]]
   use 'Mofiqul/vscode.nvim'
   -- use 'maxmx03/solarized.nvim'
@@ -28,18 +29,20 @@ packer.startup(function(use)
     tag = "v3.*",
     requires = 'kyazdani42/nvim-web-devicons'
   }
+
   -- [[ file explorer --]]
-  use { 
+  use {
     'nvim-tree/nvim-tree.lua',
     requires = {
       'nvim-tree/nvim-web-devicons'
     }
   }
   use {
-    'junegunn/fzf', 
+    'junegunn/fzf',
     run = './install --bin'
   }
   use 'junegunn/fzf.vim'
+
   --[[ LSP CONFIGS --]]
   use 'onsails/lspkind-nvim'
   use 'neovim/nvim-lspconfig'
@@ -57,14 +60,20 @@ packer.startup(function(use)
     "iamcco/markdown-preview.nvim",
     run = function() vim.fn["mkdp#util#install"]() end,
   })
-  
+
   --[[ GIT --]]
   use 'APZelos/blamer.nvim'
   use 'tpope/vim-fugitive'
 
   --[[ MISC --]]
+  use 'windwp/nvim-autopairs'
   use 'preservim/nerdcommenter'
   use { 'mg979/vim-visual-multi', branch = 'master' }
   use 'leafgarland/typescript-vim'
+  use {
+    'prettier/vim-prettier',
+    run = 'yarn install --frozen-lockfile --production',
+    branch = 'release/0.x'
+  }
 
 end)

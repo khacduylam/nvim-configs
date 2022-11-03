@@ -1,4 +1,1 @@
-vim.cmd([[
-  let g:typescript_opfirst='\%([<>=,?^%|*/&]\|\([-:+]\)\1\@!\|!=\|in\%(stanceof\)\=\>\)'
-  filetype plugin indent on
-]])
+vim.g.typescript_opfirst=[[\%([<>=,?^%|*/&]\|\([-:+]\)\1\@!\|!=\|in\%(stanceof\)\=\>\)]]

@@ -1,5 +1,4 @@
 require('ttavyud/base')
-require('ttavyud/highlights')
 require('ttavyud/plugins')
 require('ttavyud/maps')
 
