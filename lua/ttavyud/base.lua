@@ -38,5 +38,8 @@ vim.opt.termguicolors = true
 vim.opt.winblend = 0
 vim.opt.pumblend = 5
 
--- Add asterisks in block comments
+-- add asterisks in block comments
 vim.opt.formatoptions:append { 'r' }
+
+-- only active mouse for command mode
+vim.opt.mouse = 'c'

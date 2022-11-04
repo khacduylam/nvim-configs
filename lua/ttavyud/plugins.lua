@@ -18,8 +18,8 @@ packer.startup(function(use)
   use 'kyazdani42/nvim-web-devicons'
 
   --[[ THEME --]]
-  use 'Mofiqul/vscode.nvim'
-  -- use 'maxmx03/solarized.nvim'
+  --use 'Mofiqul/vscode.nvim'
+  use 'maxmx03/solarized.nvim'
   use {
    'nvim-lualine/lualine.nvim',
    requires = { 'kyazdani42/nvim-web-devicons', opt = true }

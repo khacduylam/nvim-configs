@@ -5,9 +5,9 @@ local c = require('vscode.colors')
 vim.o.background = 'dark'
 
 vscode.setup({
-    transparent = false,
+    transparent = true,
     italic_comments = true,
-    disable_nvimtree_bg = true,
+    disable_nvimtree_bg = false,
 
     -- Override colors (see ./lua/vscode/colors.lua)
     color_overrides = {
