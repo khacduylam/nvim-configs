@@ -50,6 +50,11 @@ lspconfig.tsserver.setup({
   on_attach = on_attach
 })
 
+-- lsp for golang
+lspconfig.gopls.setup({
+  on_attach = on_attach
+})
+
 -- lsp for lua
 lspconfig.sumneko_lua.setup({
   on_attach = on_attach,
