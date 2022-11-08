@@ -17,6 +17,10 @@ nvim_tree.setup({
       }
     }
   },
+  git = {
+    enable = true,
+    ignore = false,
+  },
   renderer = {
     icons = {
       glyphs = {
