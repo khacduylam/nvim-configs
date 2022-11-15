@@ -43,3 +43,9 @@ vim.opt.formatoptions:append { 'r' }
 
 -- only active mouse for command mode
 vim.opt.mouse = 'c'
+
+-- spellcheck 
+vim.opt.spell = true
+vim.opt.spelllang = { 'en_us' }
+
+
