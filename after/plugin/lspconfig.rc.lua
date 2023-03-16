@@ -71,6 +71,11 @@ lspconfig.sumneko_lua.setup({
   }
 })
 
+-- lsp for python
+lspconfig.pyright.setup({
+  on_attach = on_attach
+})
+
 -- config diagnostics 
 vim.diagnostic.config({
   virtual_text = {
