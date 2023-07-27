@@ -9,7 +9,8 @@ vim.g.loaded_netrwPlugin = 1
 nvim_tree.setup({
   sort_by = "name",
   view = {
-    adaptive_size = true,
+    --adaptive_size = true,
+    width = 40,
     mappings = {
       list = {
         { key = '?', action = 'toggle_help' },
