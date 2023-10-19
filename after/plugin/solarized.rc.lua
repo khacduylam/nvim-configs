@@ -3,7 +3,7 @@ if not status then return end
 
 solarized.setup({
   mode = 'dark',
-  theme = 'vscode',
+  --theme = 'neo',
   transparent = true,
   colors = {
     Back = '#1e1e1e',
