@@ -71,9 +71,11 @@ packer.startup(function(use)
   use { 'mg979/vim-visual-multi', branch = 'master' }
   use 'leafgarland/typescript-vim'
   use {
+    -- NOTE: for prettier ^3.x.x, change code of [<USER>.local/share/nvim/site/pack/packer/start/vim-prettier/autoload/prettier.vim]
     'prettier/vim-prettier',
     run = 'yarn install --frozen-lockfile --production',
-    branch = 'release/0.x'
+    branch = 'release/0.x',
+    --ft ={'javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'svelte', 'yaml', 'html'},
   }
 
 end)
