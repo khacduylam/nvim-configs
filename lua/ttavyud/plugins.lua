@@ -15,19 +15,19 @@ packer.startup(function(use)
   --[[ COMMON --]]
   use 'wbthomason/packer.nvim'
   use 'nvim-lua/plenary.nvim'
-  use 'kyazdani42/nvim-web-devicons'
+  use 'nvim-tree/nvim-web-devicons'
 
   --[[ THEME --]]
   --use 'Mofiqul/vscode.nvim'
   use 'maxmx03/solarized.nvim'
   use {
    'nvim-lualine/lualine.nvim',
-   requires = { 'kyazdani42/nvim-web-devicons', opt = true }
+   requires = { 'nvim-tree/nvim-web-devicons', opt = true }
   }
   use {
     'akinsho/bufferline.nvim',
     tag = "v3.*",
-    requires = 'kyazdani42/nvim-web-devicons'
+    requires = 'nvim-tree/nvim-web-devicons'
   }
 
   -- [[ file explorer --]]
