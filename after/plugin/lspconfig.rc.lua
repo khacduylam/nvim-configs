@@ -45,6 +45,11 @@ local on_attach = function(client, bufnr)
   vim.keymap.set('n', '<C-k>', vim.lsp.buf.signature_help, bufopts)
 end
 
+-- lsp for kotlin
+lspconfig.kotlin_language_server.setup({
+  on_attach = on_attach
+})
+
 -- lsp for typescript
 lspconfig.tsserver.setup({
   on_attach = on_attach
