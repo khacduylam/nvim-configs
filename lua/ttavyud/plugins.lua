@@ -70,6 +70,7 @@ packer.startup(function(use)
   use 'preservim/nerdcommenter'
   use { 'mg979/vim-visual-multi', branch = 'master' }
   use 'leafgarland/typescript-vim'
+  use 'udalov/kotlin-vim'
   use {
     -- NOTE: for prettier ^3.x.x, change code of [<USER>.local/share/nvim/site/pack/packer/start/vim-prettier/autoload/prettier.vim]
     'prettier/vim-prettier',
