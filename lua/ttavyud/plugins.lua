@@ -18,8 +18,9 @@ packer.startup(function(use)
   use 'nvim-tree/nvim-web-devicons'
 
   --[[ THEME --]]
-  --use 'Mofiqul/vscode.nvim'
-  use 'maxmx03/solarized.nvim'
+  --use 'maxmx03/solarized.nvim'
+  --use 'folke/tokyonight.nvim'
+  use 'navarasu/onedark.nvim'
   use {
    'nvim-lualine/lualine.nvim',
    requires = { 'nvim-tree/nvim-web-devicons', opt = true }

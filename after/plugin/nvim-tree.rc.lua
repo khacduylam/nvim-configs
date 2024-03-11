@@ -1,14 +1,13 @@
 local status, nvim_tree = pcall(require, 'nvim-tree')
 if not status then return end
 
-
 -- disable netrw at the very start of your init.lua (strongly advised)
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 
 local function on_attach(bufnr)
   local api = require('nvim-tree.api')
-    
+
   -- default mappings
   api.config.mappings.default_on_attach(bufnr)
 
@@ -41,6 +40,9 @@ nvim_tree.setup({
           arrow_open = ''
         }
       }
-    }
+    },
+    root_folder_label = true,
+    indent_markers = { enable = true }
   }
 })
+vim.cmd[[hi NvimTreeNormal guibg=NONE ctermbg=NONE]]
