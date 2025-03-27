@@ -20,6 +20,7 @@ packer.startup(function(use)
   --[[ THEME --]]
   --use 'maxmx03/solarized.nvim'
   --use 'folke/tokyonight.nvim'
+  --use 'aktersnurra/no-clown-fiesta.nvim'
   use 'navarasu/onedark.nvim'
   use {
    'nvim-lualine/lualine.nvim',
@@ -27,7 +28,7 @@ packer.startup(function(use)
   }
   use {
     'akinsho/bufferline.nvim',
-    tag = "v3.*",
+    tag = "*",
     requires = 'nvim-tree/nvim-web-devicons'
   }
 
@@ -77,7 +78,7 @@ packer.startup(function(use)
     'prettier/vim-prettier',
     run = 'yarn install --frozen-lockfile --production',
     branch = 'release/0.x',
-    --ft ={'javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'svelte', 'yaml', 'html'},
+    ft ={'javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'svelte', 'yaml', 'html'},
   }
 
 end)

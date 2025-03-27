@@ -56,24 +56,39 @@ lspconfig.tsserver.setup({
 })
 
 -- lsp for golang
-lspconfig.gopls.setup({
-  on_attach = on_attach
-})
+--lspconfig.gopls.setup({
+  --on_attach = on_attach
+--})
 
 -- lsp for lua
-lspconfig.lua_ls.setup({
+--lspconfig.lua_ls.setup({
+  --on_attach = on_attach,
+  --settings = {
+    --Lua = {
+      --diagnostics = {
+        --globals = { 'vim' }
+      --},
+      --workspace = {
+        --library = vim.api.nvim_get_runtime_file('', true),
+        --checkThirdParty = false
+      --},
+    --},
+  --}
+--})
+lspconfig.gopls.setup({
   on_attach = on_attach,
+  capabilities = require('cmp_nvim_lsp').default_capabilities(), -- Ensure completion works
+  cmd = {"gopls"},
+  filetypes = {"go", "gomod"},
+  root_dir = lspconfig.util.root_pattern("go.work", "go.mod", ".git"),
   settings = {
-    Lua = {
-      diagnostics = {
-        globals = { 'vim' }
+    gopls = {
+      analyses = {
+        unusedparams = true,
       },
-      workspace = {
-        library = vim.api.nvim_get_runtime_file('', true),
-        checkThirdParty = false
-      },
+      staticcheck = true,
     },
-  }
+  },
 })
 
 -- lsp for python
