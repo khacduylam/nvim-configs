@@ -51,7 +51,7 @@ lspconfig.kotlin_language_server.setup({
 })
 
 -- lsp for typescript
-lspconfig.tsserver.setup({
+lspconfig.ts_ls.setup({
   on_attach = on_attach
 })
 
