@@ -6,14 +6,14 @@ keymap.set('n', '<C-k>', '<C-w>k')
 keymap.set('n', '<C-j>', '<C-w>j')
 keymap.set('n', '<C-l>', '<C-w>l')
 
--- move lines 
+-- move lines
 keymap.set({ 'v' }, 'K', ":move '<-2 <CR>gv=gv")
 keymap.set({ 'v' }, 'J', ":move '>+1 <CR>gv=gv")
 
--- select all 
+-- select all
 keymap.set('n', '<C-a>', 'gg<S-v>G')
 
--- nvim-tree 
+-- nvim-tree
 keymap.set('n', '<C-t>', ':NvimTreeToggle<CR>')
 keymap.set('n', '<C-i>', ':NvimTreeFindFile<CR>')
 

@@ -1,6 +1,6 @@
 
 -- remove all before autocmd
-vim.cmd("autocmd!")
+--vim.cmd("autocmd!")
 
 -- set default clipboard
 vim.opt.clipboard = 'unnamedplus'
@@ -44,8 +44,6 @@ vim.opt.formatoptions:append { 'r' }
 -- only active mouse for command mode
 vim.opt.mouse = 'c'
 
--- spellcheck 
+-- spellcheck
 --vim.opt.spell = true
 --vim.opt.spelllang = { 'en_us' }
-
-
