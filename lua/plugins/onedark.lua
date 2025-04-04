@@ -29,6 +29,10 @@ return {
       --colors = {}, -- Override default colors
       --highlights = {}, -- Override highlight groups
 
+      lualine = {
+        transparent = true
+      },
+
       -- Plugins Config --
       diagnostics = {
         darker = true, -- darker colors for diagnostic
