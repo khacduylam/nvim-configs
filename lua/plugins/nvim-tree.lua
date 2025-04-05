@@ -26,12 +26,6 @@ return {
       view = {
         --adaptive_size = true,
         width = 35,
-        --mappings = {
-          --list = {
-            --{ key = '?', action = 'toggle_help' },
-            --{ key = 'K', action = 'toggle_file_info' },
-          --}
-        --}
       },
       git = {
         enable = true,
@@ -49,7 +43,12 @@ return {
         --root_folder_label = true,
         root_folder_modifier = ':~:s?$?/..?',
         indent_markers = { enable = true }
-      }
+      },
+      actions = {
+        open_file = {
+          quit_on_open = true,
+        },
+      },
     })
 
     vim.cmd[[hi NvimTreeNormal guibg=NONE ctermbg=NONE]]

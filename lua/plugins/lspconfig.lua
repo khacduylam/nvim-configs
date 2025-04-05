@@ -43,9 +43,24 @@ return {
       local bufopts = { noremap=true, silent=true, buffer=bufnr }
       vim.keymap.set('n', 'gD', vim.lsp.buf.declaration, bufopts)
       vim.keymap.set('n', 'gd', vim.lsp.buf.definition, bufopts)
-      vim.keymap.set('n', 'K', vim.lsp.buf.hover, bufopts)
-      vim.keymap.set('n', 'gi', vim.lsp.buf.implementation, bufopts)
-      vim.keymap.set('n', '<C-k>', vim.lsp.buf.signature_help, bufopts)
+      --vim.keymap.set('n', 'K', vim.lsp.buf.hover, bufopts)
+      --vim.keymap.set('n', 'gi', vim.lsp.buf.implementation, bufopts)
+      --vim.keymap.set('n', '<C-k>', vim.lsp.buf.signature_help, bufopts)
+
+      --vim.api.nvim_set_hl(0, "NormalFloat", { bg = "NONE", fg = "#cdd6f4" })
+      --vim.api.nvim_set_hl(0, "FloatBorder", { bg = "NONE", fg = "#89b4fa" })
+      --local orig_util_open_floating_preview = vim.lsp.util.open_floating_preview
+      
+      --function vim.lsp.util.open_floating_preview(contents, syntax, opts, ...)
+        --opts = opts or {} 
+        --opts.border = 'rounded'
+        --opts.wrap = true
+        --opts.wrap_at = 80
+        --opts.max_width = 80 
+        ----opts.max_height =  20 
+        
+        --return orig_util_open_floating_preview(contents, syntax, opts, ...) 
+      --end
     end
     
     -- lsp for kotlin
