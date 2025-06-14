@@ -32,7 +32,7 @@ return {
       lualine = {
         transparent = true
       },
-
+      
       -- Plugins Config --
       diagnostics = {
         darker = true, -- darker colors for diagnostic
