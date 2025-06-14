@@ -44,11 +44,11 @@ return {
         root_folder_modifier = ':~:s?$?/..?',
         indent_markers = { enable = true }
       },
-      actions = {
-        open_file = {
-          quit_on_open = true,
-        },
-      },
+      --actions = {
+        --open_file = {
+          --quit_on_open = true,
+        --},
+      --},
     })
 
     vim.cmd[[hi NvimTreeNormal guibg=NONE ctermbg=NONE]]
