@@ -63,6 +63,14 @@ return {
           },
           opts = { skip = true },
         },
+       -- Skip "%d lines yanked"
+        {
+          filter = {
+            event = "msg_show",
+            find = "lines yanked",
+          },
+          opts = { skip = true },
+        },
         -- Skip NvimTree messages
         {
           filter = {
