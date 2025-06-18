@@ -98,7 +98,15 @@ return {
         {
           filter = {
             event = "msg_show",
-            find = "^Existed$",
+            find = "^Exited",
+          },
+          opts = { skip = true },
+        },
+        -- Skip "VM warnings" message
+        {
+          filter = {
+            event = "msg_show",
+            find = "^VM has started with warnings",
           },
           opts = { skip = true },
         },
