@@ -13,7 +13,7 @@ end
 
 -- For running Ubuntu in Windows Subsystem for Linux (WSL)
 vim.api.nvim_create_autocmd("BufWritePre", {
-  pattern = { "*.js", "*.ts", "*.jsx", "*.tsx", "*.lua", "*.go" },
+  pattern = { "*.js", "*.ts", "*.jsx", "*.tsx", "*.lua", "*.go", "*.html" },
   callback = function()
     vim.cmd([[%s/\r$//e]])
   end,
