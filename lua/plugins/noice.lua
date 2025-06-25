@@ -110,6 +110,14 @@ return {
           },
           opts = { skip = true },
         },
+        -- Skip "written" message
+        {
+          filter = {
+            event = "msg_show",
+            find = "written",
+          },
+          opts = { skip = true },
+        }
       },
     })
   end
