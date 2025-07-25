@@ -90,6 +90,13 @@ return {
           lint = false,
           unstable = false,
         },
+        settings = {
+          deno = {
+            enable = true,
+            lint = false, -- Disable linting
+            unstable = false, -- Allow unstable deno APIs
+          },
+        },
       })
     else
       -- lsp for typescript(nodejs)
