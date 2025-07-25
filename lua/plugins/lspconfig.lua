@@ -88,7 +88,7 @@ return {
         root_dir = lspconfig.util.root_pattern("deno.json", "deno.jsonc"),
         init_options = {
           lint = false,
-          unstable = false,
+          unstable = true,
         },
         settings = {
           deno = {
