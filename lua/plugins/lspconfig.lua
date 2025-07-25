@@ -67,12 +67,37 @@ return {
     lspconfig.kotlin_language_server.setup({
       on_attach = on_attach
     })
+
+    -- Check whether it's a deno project or not
+    local is_deno_project = function()
+      local deno_files = { 'deno.json', 'deno.jsonc', 'deno.lock' }
     
-    -- lsp for typescript
-    lspconfig.ts_ls.setup({
-      on_attach = on_attach
-    })
+      for _, filepath in ipairs(deno_files) do
+        filepath = table.concat({ vim.fn.getcwd(), filepath }, '/')
     
+        if vim.uv.fs_stat(filepath) ~= nil then return true end
+      end
+    
+      return false
+    end
+
+    if is_deno_project() then
+      -- lsp for typescript(deno)
+      lspconfig.denols.setup({
+        on_attach = on_attach,
+        root_dir = lspconfig.util.root_pattern("deno.json", "deno.jsonc"),
+        init_options = {
+          lint = false,
+          unstable = false,
+        },
+      })
+    else
+      -- lsp for typescript(nodejs)
+      lspconfig.ts_ls.setup({
+        on_attach = on_attach,
+      })
+    end
+     
     -- lsp for golang
     lspconfig.gopls.setup({
       on_attach = on_attach,
